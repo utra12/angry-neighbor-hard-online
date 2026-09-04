@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg01" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141a24"/>
+      <stop offset="50%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#05070a"/>
+    </linearGradient>
+    <radialGradient id="flashlight" cx="35%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#ffe89e" stop-opacity="0.25"/>
+      <stop offset="60%" stop-color="#ff9900" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="doorGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a1f18"/>
+      <stop offset="100%" stop-color="#120c08"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background / Room -->
+  <rect width="800" height="450" fill="url(#bg01)"/>
+
+  <!-- Wall perspective lines -->
+  <polygon points="0,0 200,80 200,370 0,450" fill="#0b0e14" opacity="0.8"/>
+  <polygon points="800,0 600,80 600,370 800,450" fill="#090c10" opacity="0.9"/>
+  <polygon points="200,80 600,80 600,370 200,370" fill="#11161f"/>
+  <polygon points="0,450 200,370 600,370 800,450" fill="#181310"/>
+
+  <!-- Floor boards -->
+  <line x1="260" y1="370" x2="180" y2="450" stroke="#0e0a07" stroke-width="2"/>
+  <line x1="380" y1="370" x2="360" y2="450" stroke="#0e0a07" stroke-width="2"/>
+  <line x1="500" y1="370" x2="540" y2="450" stroke="#0e0a07" stroke-width="2"/>
+
+  <!-- Mystery Door at the end of hallway -->
+  <rect x="360" y="160" width="80" height="210" fill="url(#doorGrad)" stroke="#ff7700" stroke-width="1.5" stroke-opacity="0.4"/>
+  <!-- Door planks & barricade -->
+  <rect x="350" y="220" width="100" height="18" fill="#3d2a1c" rx="2" transform="rotate(-6 400 220)"/>
+  <rect x="350" y="270" width="100" height="18" fill="#352417" rx="2" transform="rotate(5 400 270)"/>
+  <circle cx="372" cy="275" r="4" fill="#ffd000" opacity="0.8"/>
+
+  <!-- Key on floor -->
+  <g transform="translate(320, 395) rotate(-25)">
+    <circle cx="0" cy="0" r="7" fill="none" stroke="#ffb700" stroke-width="3"/>
+    <rect x="7" y="-2" width="16" height="4" fill="#ffb700"/>
+    <rect x="17" y="2" width="3" height="5" fill="#ffb700"/>
+    <rect x="21" y="2" width="3" height="4" fill="#ffb700"/>
+  </g>
+
+  <!-- Ominous Neighbor Silhouette Shadow -->
+  <path d="M 520,200 C 520,170 540,150 560,150 C 580,150 600,170 600,200 C 600,230 580,245 570,250 C 620,270 650,330 650,370 L 480,370 C 480,330 500,270 550,250 C 540,245 520,230 520,200 Z" fill="#050709" opacity="0.85"/>
+  <!-- Glowing Eyes -->
+  <circle cx="550" cy="190" r="3.5" fill="#ff3300" opacity="0.9"/>
+  <circle cx="570" cy="190" r="3.5" fill="#ff3300" opacity="0.9"/>
+
+  <!-- Flashlight glow overlay -->
+  <rect width="800" height="450" fill="url(#flashlight)"/>
+
+  <!-- CRT scanlines effect -->
+  <pattern id="scanlines" width="100" height="4" patternUnits="userSpaceOnUse">
+    <line x1="0" y1="0" x2="100" y2="0" stroke="#000" stroke-width="1.2" opacity="0.3"/>
+  </pattern>
+  <rect width="800" height="450" fill="url(#scanlines)"/>
+
+  <!-- HUD overlay (v0.1) -->
+  <rect x="25" y="25" width="160" height="34" rx="4" fill="#000" fill-opacity="0.65" stroke="#ff7700" stroke-width="1"/>
+  <text x="38" y="48" fill="#ff9900" font-family="'Segoe UI', Roboto, sans-serif" font-weight="bold" font-size="14" letter-spacing="1">VERSION: 0.1 ALPHA</text>
+
+  <rect x="615" y="25" width="160" height="34" rx="4" fill="#000" fill-opacity="0.65" stroke="#44ff88" stroke-width="1"/>
+  <text x="635" y="48" fill="#44ff88" font-family="'Segoe UI', Roboto, sans-serif" font-weight="bold" font-size="14" letter-spacing="1">HARDMODE: ON</text>
+
+  <!-- Crosshair -->
+  <circle cx="400" cy="225" r="3" fill="#ffffff" opacity="0.6"/>
+  <line x1="390" y1="225" x2="396" y2="225" stroke="#fff" stroke-width="1.5" opacity="0.6"/>
+  <line x1="404" y1="225" x2="410" y2="225" stroke="#fff" stroke-width="1.5" opacity="0.6"/>
+  <line x1="400" y1="215" x2="400" y2="221" stroke="#fff" stroke-width="1.5" opacity="0.6"/>
+  <line x1="400" y1="229" x2="400" y2="235" stroke="#fff" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Bottom Label -->
+  <rect x="20" y="395" width="220" height="32" rx="4" fill="#000000" fill-opacity="0.8"/>
+  <text x="32" y="416" fill="#cccccc" font-family="'Segoe UI', Roboto, sans-serif" font-size="12">Классический коридор и заколоченная дверь</text>
+</svg>
